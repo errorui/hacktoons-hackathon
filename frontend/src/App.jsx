@@ -1,14 +1,11 @@
-import React from 'react';
-import Navbar from './components/navbar/navbar'; 
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import React from 'react'
+import Homepage from './components/frontpage/Homepage'
+const App = () => {
   return (
     <>
-      <Navbar />
+    <Homepage />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
