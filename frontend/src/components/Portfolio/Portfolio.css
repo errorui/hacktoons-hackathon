@@ -1,0 +1,70 @@
+.portfolio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 120px;
+}
+
+.portfolio-content {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color:white;
+}
+
+.portfolio-step {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.step-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #0056b3;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.step-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.step-text p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.get-started-btn {
+    background-color:blue;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.get-started-btn:hover {
+    background-color: rgb(31, 31, 184);
+}
+
+.portfolio-image img {
+    max-width: 90%;
+    height: auto;
+    margin-left: 100px;
+}

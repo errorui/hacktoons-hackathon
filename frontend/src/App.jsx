@@ -5,7 +5,7 @@ import Signup from './components/Signup/Signup';
 import Investments from './components/Investments/Investments';
 import InvestmentDetail from './components/InvestmentDetail/InvestmentDetail';
 import UserProfile from './components/UserProfile/UserProfile';
-import Navbar from './components/navbar/navbar';
+import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
 

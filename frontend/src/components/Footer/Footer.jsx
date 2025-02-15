@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-section">
-          <h3>Product</h3>
+          <h2>Product</h2>
           <ul>
             <li><a href="#">Investments</a></li>
             <li><a href="#">Referral Program</a></li>
@@ -34,7 +34,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-section">
-          <h3>Company</h3>
+          <h2>Company</h2>
           <ul>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
@@ -44,7 +44,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-section">
-          <h3>Resources</h3>
+          <h2>Resources</h2>
           <ul>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Articles</a></li>

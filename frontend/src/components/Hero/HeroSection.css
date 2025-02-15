@@ -1,0 +1,89 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('/Users/chiragmiglani/Documents/hacktoons-hackathon-1/frontend/src/assets/back3.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.hero-content{
+    background: transparent;
+}
+.hero-content h1 {
+    background: transparent;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    background: transparent;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    background: transparent;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.green-btn {
+    background: blue;
+    color: white;
+}
+
+.green-btn:hover {
+    background:rgb(18, 18, 163);
+}
+
+.white-btn {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+.white-btn:hover {
+    background: #f1f1f1;
+}
+
+.stats-section {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+}
+
+.stat {
+    text-align: center;
+    color: white;
+}
+
+.stat h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.stat p {
+    font-size: 18px;
+    opacity: 0.8;
+}

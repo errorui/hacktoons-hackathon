@@ -5,7 +5,9 @@ import { FaMountain, FaLightbulb, FaLeaf } from "react-icons/fa";
 const MissionVisionValues = () => {
   return (
     <section className="mvv-section" id="about">
+       <h1>About Us</h1>
       <div className="mvv-container">
+       
         <div className="mvv-item">
           <FaMountain className="mvv-icon" />
           <h3>Our Mission</h3>
@@ -33,7 +35,6 @@ const MissionVisionValues = () => {
           </p>
         </div>
       </div>
-      <h2 className="key-managers">Key Managers</h2>
     </section>
   );
 };
