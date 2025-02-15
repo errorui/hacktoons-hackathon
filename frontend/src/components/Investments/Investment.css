@@ -1,0 +1,75 @@
+/* General styles */
+.investments-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    min-height: 100vh;
+    background-color: black; /* Light gray background */
+}
+
+/* Individual stock card */
+.stock-card {
+/* Ensure the card has a white background */
+
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0f3f5;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px; 
+}
+
+.text-container {
+    background-color: white; /* Ensure the text container matches the card */
+    color: black; /* Ensure text is black */
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+.text-container h2,p{
+    background-color: white;
+    color: black;
+}
+/* Hover effect */
+.stock-card:hover {
+    background-color: azure;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 32px rgba(247, 239, 239, 0.463);
+}
+
+/* Stock image */
+.stock-card img {
+     width: 100%; /* Adjust width as needed */
+    height: 50%; /* Takes up half the height of the card */
+    object-fit: fit;
+}
+
+/* Price change indicator */
+.stock-change-positive {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.stock-change-negative {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Gradient Text */
+.gradient-text {
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    background: linear-gradient(to bottom, white, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

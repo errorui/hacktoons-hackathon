@@ -2,11 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './components/frontpage/Homepage';
 import Login from './components/LogIn/Login';
 import Signup from './components/Signup/Signup';
-import Investments from './components/Investments/Investments';
+
 import InvestmentDetail from './components/InvestmentDetail/InvestmentDetail';
 import UserProfile from './components/UserProfile/UserProfile';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Investments from './components/Investments/Investments';
 
 
 const App = () => {
