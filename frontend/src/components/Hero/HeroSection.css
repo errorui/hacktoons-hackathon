@@ -122,7 +122,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('/Users/chiragmiglani/Documents/hacktoons-hackathon-1/frontend/src/assets/back3.jpg') 
+    background: url('https://img.freepik.com/free-vector/digital-rupee-technology-background-design_1017-36659.jpg?t=st=1739658924~exp=1739662524~hmac=999611c706d734ad1d4ebcb9f55312c3fdd39fee4e792b6b4ff3d1502e378841&w=2000') 
                 no-repeat center center/cover;
     display: flex;
     flex-direction: column;
@@ -134,7 +134,6 @@
     animation: fadeIn 1.2s ease-out;
 }
 
-/* Parallax Effect */
 .hero-section::before {
     content: "";
     position: absolute;

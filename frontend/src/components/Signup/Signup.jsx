@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./SignUp.css"; 
-
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const CreateAccount = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -13,15 +13,38 @@ const CreateAccount = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-    alert("Account created successfully!");
+  
+    try {
+      const response = await fetch(`${backendUrl}/user/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          password: formData.password,
+        }),
+        credentials: "include", // ✅ Ensures cookies and auth headers are sent
+      });
+      
+  
+      const data = await response.json();
+      if (response.ok) {
+        alert("Account created successfully!");
+      } else {
+        alert(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Server error. Try again later.");
+    }
   };
-
+  
   return (
     <div className="create-account-container">
       <div className="form-box">

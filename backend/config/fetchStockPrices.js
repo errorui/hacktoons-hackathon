@@ -18,8 +18,11 @@ export const getStockPrice = async (symbol) => {
     };
     
     try {
-        const response = await axios.request(options);
-        return response.data.meta.regularMarketPrice
+      const response = await axios.request(options);
+      const data = response.data; // Axios already parses JSON for you
+   
+  
+      return data?.meta?.regularMarketPrice;
    
     } catch (error) {
         throw error;

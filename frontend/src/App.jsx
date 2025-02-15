@@ -8,6 +8,7 @@ import UserProfile from './components/UserProfile/UserProfile';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Investments from './components/Investments/Investments';
+import Chatbot from './components/Chatbot';
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/investment/:symbol" element={<InvestmentDetail />} />
         <Route path="/user" element={<UserProfile />} />
       </Routes>
+      <Chatbot/>
       <Footer/>
     </Router>
   );

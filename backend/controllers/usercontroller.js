@@ -11,7 +11,9 @@ import userModel from '../models/Usermode.js';
 
 const registerUser = async (req, res) => {
     try {
+        console.log("check2")
         const { name, email, password } = req.body;
+        console.log(req.body)
 
         if (!name || !email || !password) {
             return res.status(400).json({ err: "Please Enter all the Fields" });
@@ -49,6 +51,7 @@ const registerUser = async (req, res) => {
             return res.status(400).json({ err: "User not found" });
         }
     } catch (error) {
+        console.log(error)
         res.status(500).json({ err: error.message });
     }
 };

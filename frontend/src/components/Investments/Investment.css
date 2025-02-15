@@ -77,5 +77,7 @@
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
-    background: linear-gradient(to bottom, white, black);    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to bottom, white, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
