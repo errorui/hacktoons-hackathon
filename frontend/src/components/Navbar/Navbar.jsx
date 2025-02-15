@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className='nav'>
       <ul className="menu-1">
         <li className='nav-logo cursor-pointer'>
-        <Link to="/">Eco mitra</Link>
+        <Link to="/">EcoMitra</Link>
       
           </li>
         <li><Link to="/investments"><button>Investments</button></Link></li>
@@ -16,7 +16,7 @@ const Navbar = () => {
       <ul className="nav-menu">
         <li><Link to="/login"><button className='nav-signup'>Log In</button></Link></li>
         <li><Link to="/signup"><button className='nav-login'>Create Account</button></Link></li>
-        <li><Link to="/contact"><button className='nav-contact'>Contact Us</button></Link></li>
+        <li><Link to="/user"><button className='nav-contact'>Dashboard</button></Link></li>
       </ul>
     </div>
   );

@@ -9,7 +9,7 @@
     font-size: 18px;
     margin: 10px 0;
   }
-  
+
   .review-text {
     font-size: 16px;
     color:white;
@@ -19,7 +19,6 @@
 
  
   .review-card {
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -54,9 +53,13 @@
   .swiper {
     padding: 20px;
   }
-  
   .swiper-button-next,
   .swiper-button-prev {
     color: #007bff;
   }
   
+  .text-container h2, 
+.text-container p {
+    background-color: white;
+    color: black;
+}

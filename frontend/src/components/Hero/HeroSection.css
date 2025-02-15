@@ -20,6 +20,14 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
+.hero-container {
+    position: absolute;
+    left: 0;
+    top: 0; 
+}
+.hero-container {
+    float: left;
+}
 
 .hero-content p {
     background: transparent;

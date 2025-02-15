@@ -50,13 +50,32 @@ const InvestmentDetails = () => {
       </h2>
 
       <div className="stock-info">
-        <p className="price">Current Price: <span>${stockData.regularMarketPrice}</span></p>
-        <p className="high"> 52-Week High: <span>${stockData.fiftyTwoWeekHigh}</span></p>
-        <p className="low"> 52-Week Low: <span>${stockData.fiftyTwoWeekLow}</span></p>
-        <p className="high"> Day High: <span>${stockData.regularMarketDayHigh}</span></p>
-        <p className="low"> Day Low: <span>${stockData.regularMarketDayLow}</span></p>
-        <p className="volume"> Market Volume: <span>{stockData.regularMarketVolume}</span></p>
-      </div>
+  <p className="price">
+    <strong>Current Price:</strong> <br />
+    <span>${stockData.regularMarketPrice}</span>
+  </p>
+  <p className="high">
+    <strong>52-Week High:</strong> <br />
+    <span>${stockData.fiftyTwoWeekHigh}</span>
+  </p>
+  <p className="low">
+    <strong>52-Week Low:</strong> <br />
+    <span>${stockData.fiftyTwoWeekLow}</span>
+  </p>
+  <p className="high">
+    <strong>Day High:</strong> <br />
+    <span>${stockData.regularMarketDayHigh}</span>
+  </p>
+  <p className="low">
+    <strong>Day Low:</strong> <br />
+    <span>${stockData.regularMarketDayLow}</span>
+  </p>
+  <p className="volume">
+    <strong>Market Volume:</strong> <br />
+    <span>{stockData.regularMarketVolume}</span>
+  </p>
+</div>
+
       <button className=" p-4 invest bg-blue-500 border-2 rounded-4xl text-white ">
         invest
       </button>

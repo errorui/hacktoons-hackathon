@@ -34,10 +34,7 @@
     justify-content: center;
     padding: 10px;
 }
-.text-container h2,p{
-    background-color: white;
-    color: black;
-}
+
 /* Hover effect */
 .stock-card:hover {
     background-color: azure;
