@@ -1,4 +1,4 @@
-.hero-section {
+/*.hero-section {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -19,14 +19,6 @@
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-.hero-container {
-    position: absolute;
-    left: 0;
-    top: 0; 
-}
-.hero-container {
-    float: left;
 }
 
 .hero-content p {
@@ -94,4 +86,164 @@
 .stat p {
     font-size: 18px;
     opacity: 0.8;
+}*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('/Users/chiragmiglani/Documents/hacktoons-hackathon-1/frontend/src/assets/back3.jpg') 
+                no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Parallax Effect */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+
+/* Hero Content Animation */
+.hero-content {
+    background: transparent;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content h1 {
+    background: transparent;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-content p {
+    background: transparent;
+    font-size: 22px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+/* Buttons Animation */
+.hero-buttons {
+    background: transparent;
+    display: flex;
+    gap: 15px;
+    animation: fadeInUp 1.6s ease-out;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Button Hover Effects */
+.green-btn {
+    background: blue;
+    color: white;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.green-btn:hover {
+    background: rgb(18, 18, 163);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.white-btn {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.white-btn:hover {
+    background: #f1f1f1;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Stats Section Animation */
+.stats-section {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    opacity: 0;
+    animation: scaleIn 1.5s ease-in-out 1.8s forwards;
+}
+
+.stat {
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.stat h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.stat p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
