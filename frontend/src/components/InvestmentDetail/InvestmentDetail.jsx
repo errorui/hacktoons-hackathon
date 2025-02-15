@@ -21,6 +21,7 @@ const InvestmentDetails = () => {
       try {
         const response = await fetch(url, options);
         const result = await response.json();
+        console.log(result)
         setStockData(result.meta);
         
         // Convert the response body into an array suitable for Recharts
@@ -41,47 +42,81 @@ const InvestmentDetails = () => {
     fetchStockData();
   }, [symbol]);
 
-  if (!stockData) return <p className="loading-text">Loading...</p>;
+  if (!stockData) return (
+    <div style={{ 
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      height: '100vh',
+      color: 'white'
+    }}>
+      <div style={{
+        width: '50px',
+        height: '50px',
+        border: '5px solid #f3f3f3',
+        borderTop: '5px solid #3498db',
+        borderRadius: '50%',
+        animation: 'spin 1s linear infinite'
+      }}>
+        <style>{`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
+      </div>
+    </div>
+  );
 
   return (
-    <div className="stock-container">
-      <h2 className="stock-title">
+    <div style={{ padding: '1.5rem' }}>
+      <h2 style={{ color: 'white', fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>
         {stockData.longName} <span>({stockData.symbol})</span>
       </h2>
 
-      <div className="stock-info">
-  <p className="price">
-    <strong>Current Price:</strong> <br />
-    <span>${stockData.regularMarketPrice}</span>
-  </p>
-  <p className="high">
-    <strong>52-Week High:</strong> <br />
-    <span>${stockData.fiftyTwoWeekHigh}</span>
-  </p>
-  <p className="low">
-    <strong>52-Week Low:</strong> <br />
-    <span>${stockData.fiftyTwoWeekLow}</span>
-  </p>
-  <p className="high">
-    <strong>Day High:</strong> <br />
-    <span>${stockData.regularMarketDayHigh}</span>
-  </p>
-  <p className="low">
-    <strong>Day Low:</strong> <br />
-    <span>${stockData.regularMarketDayLow}</span>
-  </p>
-  <p className="volume">
-    <strong>Market Volume:</strong> <br />
-    <span>{stockData.regularMarketVolume}</span>
-  </p>
-</div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '1.5rem' }}>
+        <div style={{ backgroundColor: 'white', padding: '1rem', borderRadius: '0.5rem' }}>
+          <h4 style={{ color: 'black', backgroundColor: 'white',fontSize: '1.125rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Current Price</h4>
+          <p style={{ color: 'black', backgroundColor: 'white',fontWeight: '600' }}>${stockData.regularMarketPrice}</p>
+        </div>
+        <div style={{ backgroundColor: 'white', padding: '1rem', borderRadius: '0.5rem' }}>
+          <h4 style={{ color: 'black', backgroundColor: 'white', fontSize: '1.125rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>52-Week High</h4>
+          <p style={{ color: 'black', backgroundColor: 'white', fontWeight: '600' }}>${stockData.fiftyTwoWeekHigh}</p>
+        </div>
+        <div style={{ backgroundColor: 'white', padding: '1rem', borderRadius: '0.5rem' }}>
+          <h4 style={{ color: 'black', backgroundColor: 'white',fontSize: '1.125rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>52-Week Low</h4>
+          <p style={{ color: 'black', backgroundColor: 'white',fontWeight: '600' }}>${stockData.fiftyTwoWeekLow}</p>
+        </div>
+        <div style={{ backgroundColor: 'white', padding: '1rem', borderRadius: '0.5rem' }}>
+          <h4 style={{ color: 'black', backgroundColor: 'white',fontSize: '1.125rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Day High</h4>
+          <p style={{ color: 'black', backgroundColor: 'white',fontWeight: '600' }}>${stockData.regularMarketDayHigh}</p>
+        </div>
+        <div style={{ backgroundColor: 'white', padding: '1rem', borderRadius: '0.5rem' }}>
+          <h4 style={{ color: 'black', backgroundColor: 'white',fontSize: '1.125rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Day Low</h4>
+          <p style={{ color: 'black', backgroundColor: 'white',fontWeight: '600' }}>${stockData.regularMarketDayLow}</p>
+        </div>
+        <div style={{ backgroundColor: 'white', padding: '1rem', borderRadius: '0.5rem' }}>
+          <h4 style={{ color: 'black', backgroundColor: 'white',fontSize: '1.125rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Market Volume</h4>
+          <p style={{ color: 'black', backgroundColor: 'white',fontWeight: '600' }}>{stockData.regularMarketVolume}</p>
+        </div>
+      </div>
 
-      <button className=" p-4 invest bg-blue-500 border-2 rounded-4xl text-white ">
-        invest
+      <button style={{ 
+        padding: '1rem', 
+        backgroundColor: '#3b82f6', 
+        border: '2px solid', 
+        borderRadius: '0.5rem', 
+        color: 'white', 
+        fontWeight: '600', 
+        marginBottom: '1.5rem' 
+      }}>
+        Invest
       </button>
 
-      <h3 className="chart-title">📈 Stock Price Trend (5-Min Intervals)</h3>
-      <div className="chart-container">
+      <h3 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>
+        📈 Stock Price Trend (5-Min Intervals)
+      </h3>
+      <div>
         <ResponsiveContainer width="100%" height={400}>
           <LineChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#444" />
