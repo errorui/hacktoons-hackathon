@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <nav className='bg-white shadow-md p-4'>
-      <div className='container mx-auto flex justify-between items-center'>
-        <div className='text-2xl font-bold text-blue-600'>EcoMitra</div>
-        <button className='md:hidden text-2xl' onClick={() => setIsOpen(!isOpen)}>☰</button>
-        <ul className={`md:flex space-x-6 ${isOpen ? 'block' : 'hidden'} md:block`}>
-          <li className='hover:text-blue-500 cursor-pointer'>Home</li>
-          <li className='hover:text-blue-500 cursor-pointer'>Explore</li>
-          <li className='hover:text-blue-500 cursor-pointer'>About</li>
-          <li className='bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 cursor-pointer'>Contact</li>
-        </ul>
-      </div>
-    </nav>
+    <div className='nav'>
+      <ul className="menu-1">
+        <li className='nav-logo'>EcoMitra</li>
+        <li>< button >Investments</button></li>
+        <li><button >About Us </button></li>
+      </ul>
+      <ul className="nav-menu">
+        <li><button className='nav-signup'>Log In</button></li>
+        <li><button className='nav-login'>Sign Up</button></li>
+        <li> <button className='nav-contact'>Contact Us</button></li>
+      </ul>
+    </div>
   );
 }
 
