@@ -35,8 +35,8 @@ app.options('*', cors({
 });
 app.use('/user',userRoutes)
 
-
-app.listen(3001,()=>{
+let port=process.env.PORT||3000
+app.listen(port,()=>{
     console.log("server is running on port 3001")
 })
 
