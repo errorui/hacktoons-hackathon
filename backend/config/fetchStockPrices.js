@@ -12,7 +12,7 @@ export const getStockPrice = async (symbol) => {
         diffandsplits: 'false'
       },
       headers: {
-        'x-rapidapi-key': 'd3e92ae6d0msh46e3c2c20d23d24p15d981jsn32156835c781',
+        "x-rapidapi-key": "293db707d2msh3b8c351d3e22470p1f39eajsn5f72855ed56b",
         'x-rapidapi-host': 'yahoo-finance15.p.rapidapi.com'
       }
     };
