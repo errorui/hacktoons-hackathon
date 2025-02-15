@@ -1,5 +1,5 @@
 *{
-    background: black;
+    background: #0c0c3f;
 }
 .nav{
     display: flex;
@@ -8,7 +8,9 @@
     margin: 40px 120px;
     color: white;
 }
-
+button{
+    background: #121746;
+}
 .nav-logo{
     font-family: Outfit;
     font-size: 42px;

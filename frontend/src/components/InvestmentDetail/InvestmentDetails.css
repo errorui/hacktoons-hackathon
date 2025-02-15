@@ -1,134 +1,96 @@
 /* InvestmentDetails.css */
 .stock-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 24px;
-    border-radius: 16px;
-    background: rgba(15, 23, 42, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    color: white;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-  }
-  .stock-info strong {
-    font-size: 50px; 
-    font-weight: bold;
-    display: block; 
-}
-  .stock-info p {
-    font-size: xx-large; /* Slightly larger than medium */
-    margin-bottom: 20px; /* More spacing between entries */
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 16px;
+  background: white; /* White background */
+  color: black; /* Black text */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* Stock title */
+.stock-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: black; /* Ensure title is black */
+  letter-spacing: 0.5px;
+}
 
+/* Company information grid */
+.stock-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4x4 grid */
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+/* Individual data container */
+.stock-info p {
+  background: rgba(0, 0, 0, 0.05); /* Light background for contrast */
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600; /* Semi-bold values */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.stock-info p:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Bold titles */
+.stock-info strong {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  display: block;
+}
+
+/* Semi-bold values */
 .stock-info span {
-    font-size: 30px; 
-    color: #333;
-    display: block; 
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  display: block;
 }
-  .stock-title {
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: #facc15;
-    letter-spacing: 0.5px;
-  }
-  
-  .stock-title span {
-    color: #4ade80;
-    font-weight: 600;
-  }
-  
+
+/* Highlighted values */
+.high span {
+  color: #facc15;
+}
+
+.low span {
+  color: #dc2626;
+}
+
+.volume span {
+  color: #38bdf8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .stock-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-bottom: 24px;
-    padding: 16px;
+      grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
   }
-  
-  .stock-info p {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    padding: 16px;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 400;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .stock-info {
+      grid-template-columns: 1fr; /* Stack in 1 column for mobile */
   }
-  
-  .stock-info p:hover {
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .stock-info span {
-    font-weight: 600;
-    color: #4ade80;
-    margin-left: 4px;
-  }
-  
-  .high span {
-    color: #facc15;
-  }
-  
-  .low span {
-    color: #dc2626;
-  }
-  
-  .volume span {
-    color: #38bdf8;
-  }
-  
-  .chart-title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: #93c5fd;
-    letter-spacing: 0.3px;
-  }
-  
-  .chart-container {
-    padding: 20px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  .loading-text {
-    font-size: 18px;
-    font-weight: 500;
-    color: #f87171;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  /* Add smooth transitions for better interactivity */
-  .stock-container, .stock-info p, .chart-container {
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .stock-info {
-      grid-template-columns: 1fr;
-    }
-    
-    .stock-title {
+
+  .stock-title {
       font-size: 24px;
-    }
-    
-    .chart-title {
-      font-size: 18px;
-    }
   }
+}

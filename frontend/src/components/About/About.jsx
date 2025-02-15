@@ -1,6 +1,9 @@
 
 import "./About.css";
-import { FaMountain, FaLightbulb, FaLeaf } from "react-icons/fa";
+import {  FaLightbulb, FaLeaf } from "react-icons/fa";
+import { TbCircleTriangle } from "react-icons/tb";
+
+
 
 const MissionVisionValues = () => {
   return (
@@ -9,7 +12,7 @@ const MissionVisionValues = () => {
       <div className="mvv-container">
        
         <div className="mvv-item">
-          <FaMountain className="mvv-icon" />
+          <TbCircleTriangle color="#34a1eb" className="mvv-icon" />
           <h3>Our Mission</h3>
           <p>
             Our mission is to empower individuals to invest in low-carbon 
@@ -17,7 +20,7 @@ const MissionVisionValues = () => {
           </p>
         </div>
         <div className="mvv-item">
-          <FaLightbulb className="mvv-icon" />
+          <FaLightbulb color="34a1eb"className="mvv-icon" />
           <h3>Our Vision</h3>
           <p>
             We envision a global community of investors who benefit financially from 
@@ -26,7 +29,7 @@ const MissionVisionValues = () => {
           </p>
         </div>
         <div className="mvv-item">
-          <FaLeaf className="mvv-icon" />
+          <FaLeaf color="34a1eb" className="mvv-icon" />
           <h3>Our Values</h3>
           <p>
             We are committed to transparency, sustainability, and delivering value 
