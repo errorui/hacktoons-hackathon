@@ -13,6 +13,7 @@ This project is a **web-based stock market learning and investment platform** th
 - **📉 Portfolio Management**: Users can track their investments and profits/losses.
 - **⏳ Real-time Data**: Fetches stock prices and trends from APIs.
 - **🖥️ User Dashboard**: Displays portfolio, recommendations, and chatbot interactions.
+- **🎮 Gamification**: Users earn rewards, badges, and ranks based on trading performance and learning milestones.
 
 ## 🛠️ Tech Stack
 
@@ -95,4 +96,6 @@ This project is a **web-based stock market learning and investment platform** th
 - **Chirag Miglani** – Frontend Developer
 - **Manik Dhiman** – Frontend Developer
 
+---
+🚀 *Happy Trading!* 🎯
 
