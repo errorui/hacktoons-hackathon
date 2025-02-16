@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Navbar.css";
+import { IoGameController } from "react-icons/io5";
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const Navbar = () => {
   const [user, setUser] = useState(null);
