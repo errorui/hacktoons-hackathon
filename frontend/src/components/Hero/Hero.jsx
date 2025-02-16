@@ -6,8 +6,8 @@ const HeroSection = () => {
   return (
     <div className="hero-section">
       <div className="hero-content">
-        <h1>Invest in a greener future</h1>
-        <p>Make an impact while growing your wealth</p>
+        <h1>Invest with Confidence</h1>
+        <p>Impact with Purpose</p>
         <div className="hero-buttons">
           <button className="btn green-btn"> 
            <Link style={{
