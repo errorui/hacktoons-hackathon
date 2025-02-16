@@ -61,7 +61,7 @@ const reviews = [
     time: "8 months ago",
     text: "Smooth process and a great way to invest in clean energy.",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/women/47.jpg",
+    image: "https://img.freepik.com/free-photo/beautiful-charming-girl-wears-pink-hoodie-visor-cap-back_176532-7775.jpg",
   },
   {
     name: "Michael",
