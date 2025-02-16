@@ -24,6 +24,11 @@ button{
     gap: 90px;
 
 }
+.game{
+    font-size: large;
+    margin-left: -20px;
+    cursor:pointer;
+}
 .menu-1{
     display: flex;
     align-items: center;
