@@ -55,7 +55,8 @@ const StockDashboard = () => {
   if (!user) return <p>Loading...</p>;
 
   return (
-    <div className="dashboard-container">
+    <>
+{user?(  <div className="dashboard-container">
 
         <div className="header" >
           
@@ -99,7 +100,13 @@ const StockDashboard = () => {
           )}
         </div>
       </div>
-    </div>
+    </div>):(
+      <h1 style={{
+        fontSize:"50px",
+        color:"white"
+      }}> Loading</h1>
+    )}
+    </>
   );
 };
 
