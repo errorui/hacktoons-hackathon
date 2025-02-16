@@ -45,6 +45,7 @@ const Navbar = () => {
             <button>About Us</button>
           </Link>
         </li>
+         <li className='game'><button><IoGameController /></button></li>
       </ul>
       <ul className="nav-menu">
         {user ? (
