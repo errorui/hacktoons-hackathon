@@ -1,8 +1,14 @@
 # 📈 Stock Market Learning & Investment Platform
 
-## 🚀 Project Overview
+## Problem Statement 
+Lack of risk-free stock trading experience and guidance leads to poor investment decisions and limited financial literacy among beginners.
+
+## 🚀 Project Solution
 
 This project is a **web-based stock market learning and investment platform** that allows users to invest in stocks using **dummy money**. The platform features a **chatbot for assistance**, a **recommendation system for stock suggestions**, and a **dummy account feature** for users to practice trading without financial risk.
+
+## 🛠️ Prototype/Deployed Site:
+https://hacktoons-hackathon-git-main-raj-ramans-projects.vercel.app/
 
 ## 🌟 Features
 
