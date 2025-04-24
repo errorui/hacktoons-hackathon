@@ -110,8 +110,6 @@ const Chatbot = () => {
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  const API_KEY = "AIzaSyBSPoo-s7tzXyt58oPUV_Rw0Bx3gd-ddRM";
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro", Temperature: 0.2 });
 
