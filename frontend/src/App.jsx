@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/investment/:symbol" element={<InvestmentDetail />} />
         <Route path="/user" element={<UserProfile />} />
       </Routes>
-      <Chatbot/>
+
       <Footer/>
     </Router>
   );
