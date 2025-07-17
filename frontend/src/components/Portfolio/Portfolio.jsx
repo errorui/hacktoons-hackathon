@@ -1,44 +1,74 @@
 import React from "react";
-import "./Portfolio.css";
 import portfolioImage from "../../../src/assets/port.png";
+
+const steps = [
+  {
+    number: "1",
+    title: "Create your Energea account",
+    description:
+      "Begin your investment journey by answering a series of questions to help us find the best solar energy investments for you.",
+  },
+  {
+    number: "2",
+    title: "Build your solar portfolio",
+    description:
+      "Purchase equity in solar energy projects for as little as $100 and build a diverse portfolio.",
+  },
+  {
+    number: "3",
+    title: "Collect dividends as your projects sell energy",
+    description:
+      "Monitor your portfolio’s financial performance and environmental impact using our intuitive investor dashboard.",
+  },
+];
 
 const Portfolio = () => {
   return (
-    <div className="portfolio-container">
-      <div className="portfolio-content">
-        <h1>Build your portfolio in minutes...</h1>
+    <section className="bg-white py-20 px-6 md:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         
-        <div className="portfolio-step">
-          <div className="step-number">1</div>
-          <div className="step-text">
-            <h3>Create your Energea account</h3>
-            <p>Begin your investment journey by answering a series of questions to help us find the best solar energy investments for you.</p>
+        {/* Text Content */}
+        <div className="w-full lg:w-1/2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+            Build your portfolio in minutes...
+          </h2>
+
+          <div className="space-y-8">
+            {steps.map((step, idx) => (
+              <div
+                key={idx}
+                className="flex justify-between items-start p-4 border-2 border-slate-100 rounded-lg shadow-sm hover:shadow-md  hover:scale-105  transition-all duration-300 group"
+              >
+                <div className="flex-1">
+                  
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    {step.description}
+                  </p>
+                </div>
+
+               
+              </div>
+            ))}
           </div>
+
+          <button className="mt-10 px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition duration-300">
+            Get Started →
+          </button>
         </div>
 
-        <div className="portfolio-step">
-          <div className="step-number">2</div>
-          <div className="step-text">
-            <h3>Build your solar portfolio</h3>
-            <p>Purchase equity in solar energy projects for as little as $100 and build a diverse portfolio.</p>
-          </div>
+        {/* Image */}
+        <div className="w-full lg:w-1/2">
+          <img
+            src={portfolioImage}
+            alt="Portfolio showcase"
+            className="w-full max-w-md mx-auto lg:max-w-full"
+          />
         </div>
-
-        <div className="portfolio-step">
-          <div className="step-number">3</div>
-          <div className="step-text">
-            <h3>Collect dividends as your projects sell energy</h3>
-            <p>Monitor your portfolio’s financial performance and environmental impact using our intuitive investor dashboard.</p>
-          </div>
-        </div>
-
-        <button className="get-started-btn">Get Started →</button>
       </div>
-
-      <div className="portfolio-image">
-        <img src={portfolioImage} alt="Portfolio showcase" />
-      </div>
-    </div>
+    </section>
   );
 };
 

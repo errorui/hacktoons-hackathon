@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./SignUp.css"; 
+
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const CreateAccount = () => {
   const [formData, setFormData] = useState({

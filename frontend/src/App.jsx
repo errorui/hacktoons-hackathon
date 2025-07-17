@@ -1,30 +1,43 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Homepage from './components/frontpage/Homepage';
 import Login from './components/LogIn/Login';
 import Signup from './components/Signup/Signup';
-
 import InvestmentDetail from './components/InvestmentDetail/InvestmentDetail';
 import UserProfile from './components/UserProfile/UserProfile';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Investments from './components/Investments/Investments';
-import Chatbot from './components/Chatbot';
-
+// import Chatbot from './components/Chatbot';
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out',
+    });
+  }, []);
+
   return (
     <Router>
-         <Navbar /> 
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/investments" element={<Investments />} />
-        <Route path="/investment/:symbol" element={<InvestmentDetail />} />
-        <Route path="/user" element={<UserProfile />} />
-      </Routes>
-
-      <Footer/>
+      <div className="">
+      
+        <Navbar />
+        <main className="relative ">
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/investments" element={<Investments />} />
+            <Route path="/investment/:symbol" element={<InvestmentDetail />} />
+            <Route path="/user" element={<UserProfile />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 };

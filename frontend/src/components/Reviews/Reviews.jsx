@@ -1,10 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Star } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./Reviews.css";
 
 const reviews = [
   {
@@ -79,16 +79,38 @@ const reviews = [
   },
 ];
 
+// Helper to render stars
+const StarRating = ({ count }) => {
+  return (
+    <div className="flex justify-center space-x-1  mb-3">
+      {Array.from({ length: count }).map((_, i) => (
+        <Star key={i} size={18}  strokeWidth={1} />
+      ))}
+    </div>
+  );
+};
+
 const Reviews = () => {
   return (
-    <div className="reviews-container">
-      <h2>See What Our Investors Are Saying</h2>
-      <p className="review-summary">
-        ⭐️⭐️⭐️⭐️⭐️ <strong>5.0 rating from 96 reviews</strong>
-      </p>
-      <p className="review-text">
-        At EcoMitra, we believe in delivering more than just returns. Our investors trust us to align their financial goals with their values, and we're committed to upholding that trust. Learn how our commitment to transparency and exceptional service has made a difference for our investors.
-      </p>
+    <section className="bg-white py-20 px-6 md:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          See What Our Investors Are Saying
+        </h2>
+        <div className="flex items-center justify-center gap-2  text-xl font-semibold mb-2">
+          <Star size={20}  strokeWidth={1.5} />
+          <Star size={20}  strokeWidth={1.5} />
+          <Star size={20}  strokeWidth={1.5} />
+          <Star size={20}  strokeWidth={1.5} />
+          <Star size={20}  strokeWidth={1.5} />
+          <span className="text-gray-800 ml-2 text-base font-medium">5.0 rating from 96 reviews</span>
+        </div>
+        <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-base sm:text-lg">
+          At <strong>EcoMitra</strong>, we believe in delivering more than just returns.
+          Our investors trust us to align their financial goals with their values. We're
+          committed to transparency and exceptional service that truly makes a difference.
+        </p>
+      </div>
 
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
@@ -96,26 +118,33 @@ const Reviews = () => {
         slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 3500 }}
         breakpoints={{
           320: { slidesPerView: 1 },
+          640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
+        className="py-12  text-black"
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>
-            <div className="review-card">
-              <img src={review.image} alt={review.name} className="review-image" />
-              <h3>{review.name}</h3>
-              <p className="review-time">{review.time}</p>
-              <div className="stars">⭐️⭐️⭐️⭐️⭐️</div>
-              <p className="review-text">{review.text}</p>
+            <div className="hover:scale-105 hover:shadow-2xl hover: bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-md  transition-all duration-300 h-full flex flex-col items-center text-center">
+              <img
+                src={review.image}
+                alt={review.name}
+                className="w-20 h-20 rounded-full object-cover shadow mb-4"
+                loading="lazy"
+              />
+              <h3 className="text-lg font-semibold text-gray-900">{review.name}</h3>
+              <p className="text-sm text-gray-500 mb-2">{review.time}</p>
+              <StarRating count={review.rating} />
+              <p className="text-gray-700 text-sm sm:text-base">{review.text}</p>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 };
 
